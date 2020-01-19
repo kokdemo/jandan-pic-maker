@@ -71,6 +71,13 @@ var sticker = new Vue({
     },
     created: function () {
         this.addText()
+        this.addText()
+        this.addText()
+    },
+    mounted:function () {
+        this.addText()
+        this.addText()
+        this.addText()
     },
     watch: {
         text: function (val) {
@@ -108,11 +115,11 @@ var sticker = new Vue({
                 mineType: 'image/jpeg',
                 quality: 1
             }
-            this.dataUrl = document.getElementsByTagName('canvas')[0].toDataURL('image/png');
+            this.dataUrl = document.getElementsByTagName('canvas')[0].toDataURL('image/jpeg');
         },
         downloadImg() {
             var dataUrl = this.dataUrl;
-            var name = this.text;
+            var name = "煎蛋春联"+this.text[0];
             downloaduri(dataUrl, name);
 
         }
