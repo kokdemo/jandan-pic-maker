@@ -24,8 +24,8 @@ var n,t=arguments[3],r=require("buffer").Buffer;(function(){var r,e=200,u="Unsup
 },{"buffer":"dskh"}],"vKFU":[function(require,module,exports) {
 
 },{}],"brBc":[function(require,module,exports) {
-module.exports="jandan-pic-maker/c1080.3fea011d.jpg";
+module.exports="/c1080.3fea011d.jpg";
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var t=d(require("vue/dist/vue.js")),e=d(require("konva")),a=d(require("lodash"));require("./index.css");var n=d(require("./c1080.jpg"));function d(t){return t&&t.__esModule?t:{default:t}}var i=[88,58,45];function r(t,a,n,d){var r=new e.default.Text({text:t,fontSize:i[1],fontFamily:"Lato,YouYuan",fill:"#ffd700",align:"center",verticalAlign:"middle"});0==n&&(r.x((1080-r.width())/2),r.y(d)),0==d&&(r.x(n),r.y((1080-r.height())/2+90)),a.add(r)}function u(t,a){return new e.default.Stage({container:"canvas",width:t,height:a})}function o(t,a,d){var i=new Image;return i.src=n.default,new e.default.Image({x:0,y:0,width:t,height:a,image:i})}function c(t,e){var a=document.createElement("a");a.download=e+".png",a.href=t,document.body.appendChild(a),a.click(),document.body.removeChild(a)}var h=new t.default({el:"#main",data:{text:["新春大吉","这是上联","这是下联"],dataUrl:""},created:function(){this.addText(),this.addText(),this.addText()},mounted:function(){this.addText(),this.addText(),this.addText()},watch:{text:function(t){this.addText()}},computed:{textRight:function(){return this.text[1].replace(/(.{1})/g,"$1\r\n")},textLeft:function(){return this.text[2].replace(/(.{1})/g,"$1\r\n")}},methods:{addText:function(){var t=this.text[0],a=this.textRight,n=this.textLeft,d=[1080,1080,60],i=u(d[0],d[1]),c=new e.default.Layer,h=o(d[0],d[1],d[2]);c.add(h),r(t,c,0,160),r(a,c,900,0),r(n,c,130,0),i.add(c);this.dataUrl=document.getElementsByTagName("canvas")[0].toDataURL("image/jpeg")},downloadImg:function(){c(this.dataUrl,"煎蛋春联"+this.text[0])}}});
 },{"vue/dist/vue.js":"HbND","konva":"qdpx","lodash":"B1iE","./index.css":"vKFU","./c1080.jpg":"brBc"}]},{},["Focm"], null)
-//# sourceMappingURL=jandan-pic-maker/src.9f3b484a.js.map
+//# sourceMappingURL=/src.9f3b484a.js.map
